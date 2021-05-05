@@ -17,6 +17,7 @@ patchesStrategicMerge:
 - deployment_replicas.yaml
 - deployment_env.yaml
 - service.yaml
+- ingress.yaml
 
 
 configMapGenerator:

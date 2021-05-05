@@ -3,11 +3,14 @@ kind: Service
 metadata:
   name: my-app
   labels:
-    run: my-app
+    app: my-app
 spec:
   ports:
     - port: 8080
-      nodePort: 8080
+      targetPort: 8080
   selector:
     app: my-app
+  sessionAffinity: None
   type: NodePort
+status:
+  loadBalancer: {}
