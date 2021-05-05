@@ -4,8 +4,11 @@ kind: Kustomization
 bases:
 - ../../base
 
-namespace: my-app-prod
-nameSuffix: -prod
+resources:
+- namespace.yaml
+
+namespace: test
+#nameSuffix: -prod
 
 commonLabels:
   foo: bar
@@ -13,7 +16,6 @@ commonLabels:
 patchesStrategicMerge:
 - deployment_replicas.yaml
 - deployment_env.yaml
-- deployment_volume.yaml
 
 
 configMapGenerator:

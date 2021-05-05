@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: alpine:3.10
+        image: badmullafo/outyet:latest
         tty: true
         stdin: true
         env:
