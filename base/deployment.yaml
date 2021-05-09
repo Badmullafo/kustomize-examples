@@ -15,12 +15,15 @@ spec:
       containers:
       - name: my-app
         image: my-app
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
         tty: true
         stdin: true
         env:
           - name: foo
             value: bar
-        resources:
-          limits:
-            memory: "64Mi"
-            cpu: "100m"
